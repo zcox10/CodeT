@@ -2,7 +2,7 @@
 
 # Overview
 
-In the paper, we present **RepoCoder**, a simple, generic, and effective framework to tackle the repository-level code completion task, which is to continue writing the unfinished code based on a broader context of the repository. RepoCoder incorporates a similarity-based retriever, a pre-trained code language model, and a novel iterative retrieval-generation paradigm. It streamlines the overall process and eliminates the need for heuristic rules, static code analysis, data labeling, and model re-training in previous studies. 
+In the paper, we present **RepoCoder**, a simple, generic, and effective framework to tackle the repository-level code completion task, which is to continue writing the unfinished code based on a broader context of the repository. RepoCoder incorporates a similarity-based retriever, a pre-trained code language model, and a novel iterative retrieval-generation paradigm. It streamlines the overall process and eliminates the need for heuristic rules, static code analysis, data labeling, and model re-training in previous studies.
 
 ![framework](./figs/framework.png)
 <center>
@@ -60,16 +60,19 @@ We utilize a private library to handle the execution and evaluation of the funct
 # Quickstart
 
 ## Prepare Environment
+
 First, we should set up a python environment. This code base has been tested under python 3.8.
 
 ```bash
-$ conda create -n repocoder python=3.8
-$ conda activate repocoder
-$ pip install -r requirements.txt
+conda create -n repocoder python=3.8
+conda activate repocoder
+pip install -r requirements.txt
 ```
 
 ## Run the Code Completion
+
 1. The `run_RG1_and_oracle_method` function in `run_pipeline.py` shows the process of building the prompts for vanilla retrieval-augmented generation (RG1) and the Oracle method. The generated prompts are listed in a .jsonl file, where each line contains the content in the following format:
+
 ```json
 {
   "prompt": "...the retrieved code snippets and unfinished code...",
@@ -84,6 +87,7 @@ $ pip install -r requirements.txt
 ```
 
 2. Then we can call the model to generate completions and organize the results in the following format:
+
 ```json
 {
   "prompt": "...the retrieved code snippets and unfinished code...",
@@ -113,7 +117,7 @@ If our work is useful, please consider citing our paper:
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+the rights to use your contribution. For details, visit <https://cla.opensource.microsoft.com>.
 
 When you submit a pull request, a CLA bot will automatically determine whether you need to provide
 a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
@@ -129,8 +133,8 @@ Please note that this repo is under [MIT License](LICENSE).
 
 # Trademarks
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft
+trademarks or logos is subject to and must follow
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.
