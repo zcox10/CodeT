@@ -1,1 +1,7 @@
+__pycache__/
+datasets/
+repositories/
+cache/
+
 .python-version
+.vscode

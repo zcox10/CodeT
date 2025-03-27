@@ -6,6 +6,7 @@ import functools
 
 from utils import Tools, FilePathBuilder, CONSTANTS
 from collections import defaultdict
+import os
 
 
 class RepoWindowMaker:
@@ -155,7 +156,7 @@ class GroundTruthWindowMaker:
             f"build {len(code_windows)} ground truth windows for {self.repo} with window size {self.window_size}"
         )
         output_path = FilePathBuilder.search_first_window_path(
-            self.benchmark, CONSTANTS.rg, self.repo, self.window_size
+            self.benchmark, CONSTANTS.gt, self.repo, self.window_size
         )
         Tools.dump_pickle(code_windows, output_path)
 
@@ -239,6 +240,7 @@ class MakeWindowWrapper:
 
     def window_for_baseline_and_ground(self):
         tasks = Tools.load_jsonl(self.task_file_path)
+
         for window_size in self.window_sizes:
             for repo in self.repos:
                 baseline_window_maker = BaselineWindowMaker(
