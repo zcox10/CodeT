@@ -57,14 +57,15 @@ This project contains the basic components of CodeT and a main entry point, here
 # Quickstart
 
 ## Prepare Environment
+
 First, you should set up a python environment. This code base has been tested under python 3.7.
 
 After installing python 3.7, we strongly recommend you to use `virtualenv` to manage the python environment. You could use following commands to create an environment `venv` and activate it.
 
 ```bash
-$ python3.7 -m venv venv
-$ source venv/bin/activate
-$ pip install -r requirements.txt
+python3.7 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ## Prepare Data
@@ -72,6 +73,7 @@ $ pip install -r requirements.txt
 First, you can find our processed HumanEval and MBPP benchmarks in the `data/dataset` directory, including the data for code solution and test case generation. Then you may reproduce the results of InCoder and CodeGen on the HumanEval benchmark using the data we provide in the `data/generated_data` directory. Or you can feed the input data to the code generation models (e.g. [CodeGen](https://github.com/salesforce/CodeGen) and [InCoder](https://github.com/dpfried/incoder)) to generate code solutions and test cases.
 
 Here is an example of the HumanEval benchmark:
+
 ```json
 {
     "task_id": "HumanEval/23",
@@ -83,6 +85,7 @@ Here is an example of the HumanEval benchmark:
 ```
 
 And the model output should look like this:
+
 ```json
 {
     "prompt": "\n\ndef strlen(string: str) -> int:\n    \"\"\" Return length of given string\n    \"\"\"\n",
@@ -129,7 +132,7 @@ If our work is useful for you, please consider citing our paper:
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+the rights to use your contribution. For details, visit <https://cla.opensource.microsoft.com>.
 
 When you submit a pull request, a CLA bot will automatically determine whether you need to provide
 a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
@@ -145,8 +148,8 @@ Please note that this repo is under [MIT License](LICENSE).
 
 # Trademarks
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft
+trademarks or logos is subject to and must follow
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.
