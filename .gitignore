@@ -7,3 +7,5 @@ prompts/
 .python-version
 .vscode
 .DS_Store
+
+test.ipynb
