@@ -6,8 +6,9 @@ import itertools
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-from make_window import MakeWindowWrapper
-from build_vector import BuildVectorWrapper, BagOfWords
+from make_windows.make_window import MakeWindowWrapper
+from build_vectors.bag_of_words import BagOfWords
+from build_vectors.build_vector import BuildVectorWrapper
 from search_code import CodeSearchWrapper
 from build_prompt import BuildPromptWrapper
 
